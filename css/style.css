@@ -1,0 +1,135 @@
+/* Base Element Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.6;
+  color: black;
+  background-color: #b8130f;
+  font-family: "Work sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: rgba(89, 89, 89, .5);
+  text-shadow: -.5px -.5px black;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+	font-size: 1em;
+	margin-bottom: 1.8em;
+}
+/* Base Layout Styles */
+.news {
+  font-style: italic;
+}
+.nav-button {
+  background-color: rgba(235,226,217,255);
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin: 1px 0;
+  }
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: white;
+}
+.logo {
+  width: 100%;
+  margin-bottom: -6px;
+  /* min-height: 250px; */
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.chicken-pic {
+  margin: auto;
+}
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foot-social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  /* justify-content: space-around; */
+  /* background-color: black; */
+}
+.footer-item {
+   padding: 30px;
+   font-size: 30px;
+   width: 30px;
+   text-align: center;
+   text-decoration: none;
+   margin: 5px 2px;
+   border-radius: 50%;
+}
+.foot-thumbs {
+  width: 100%;
+}
+.foot-wagon {
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media (min-width:769px) {
+
+  .main-nav,
+  .row,
+  .foot-img {
+    display: flex;
+  }
+
+  .logo {
+    margin-bottom: -8.5px;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 3rem;
+    margin-bottom: -2px;
+  }
+  /* .covid-update {
+    max-width: 50%;
+  } */
+  .container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .col {
+    flex: 1 50%;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .foot-img {
+    justify-content: center;
+    }
+  .foot-thumbs {
+    max-width: 900px;
+    }
+}
+@media (min-width: 1000px) {
+  .covid-update {
+    width: 50%;
+    }
+
+  }
