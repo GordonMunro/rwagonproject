@@ -6,7 +6,7 @@ body {
   line-height: 1.6;
   color: black;
   background-color: #b8130f;
-  font-family: "Work sans", sans-serif;
+  font-family: 'Work sans', sans-serif;
 }
 a {
   text-decoration: none;
@@ -29,13 +29,25 @@ p {
 	font-size: 1em;
 	margin-bottom: 1em;
 }
+h1,
+h2 {
+  line-height: 1.6;
+}
 footer {
   background-color: #ebe2d9;
   }
+iframe {
+  height: 40vh;
+  width: 100%;
+}
 /* Base Layout Styles */
 .news {
   font-style: italic;
 }
+.col {
+  padding: 10px;
+}
+
 .nav-button {
   background-color: rgba(235,226,217,255);
   border: none;
@@ -45,14 +57,27 @@ footer {
   width: 100%;
   text-align: center;
   margin: 1px 0;
+  font-weight: bold;
   }
+  .menu-button {
+    background-color: rgba(235,226,217, .6);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    font-size: 16px;
+    width: 20rem;
+    text-align: center;
+    margin: 1px 0;
+    font-weight: bold;
+    border-radius: 10px;
+    }
 .container {
   background-color: white;
 }
 .logo {
   width: 100%;
   margin-bottom: -6px;
-  /* min-height: 250px; */
+  max-height: 300px;
 }
 .row {
   display: flex;
@@ -65,13 +90,12 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .foot-social-links {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* justify-content: space-around; */
-  /* background-color: black; */
 }
 .footer-item {
    padding: 30px;
@@ -82,26 +106,43 @@ footer {
    margin: 5px 2px;
    border-radius: 50%;
 }
-.menu-header {
-  margin-bottom: -24px;
-}
-/* .foot-thumbs {
-  width: 100%;
-  } */
-.menu_footer {
-  margin-top: -20px;
-}
 
 #menu {
-  background-image: url(../images/cassouley_copy2.jpg);
+  background-image: url(../images/rw-brisket3.jpg);
   background-repeat: repeat-y;
   background-size: 100%;
   padding: 10px 0;
+}
+#location {
+  height: 40rem;
+
+}
+#din-menu {
+    background-image: url(../images/cassouley_copy2.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    padding: 10px 0;
+}
+#main_menu {
+  background-image: url(../images/cheeseburger4.jpg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+  padding: 10px 0;
+  min-height: 100vh;
+}
+#loc_tag {
+  color: white;
 }
 .menu_font {
   color: white;
   padding-left: 1em;
   padding-right: 1em;
+  line-height: 1em;
+  padding-top: 20px;
+  }
+
+.menu_font p {
+  font-style: italic;
 }
 /* Media Queries */
 
@@ -133,7 +174,8 @@ footer {
     margin: 0 auto;
   }
 
-  .col {
+  .col,
+  .col_loc {
     flex: 1 50%;
   }
 
@@ -147,6 +189,9 @@ footer {
   }
    .foot-thumbs {
     max-width: 900px;
+    }
+    .sticky_footer {
+      min-height: calc(100vh - 118px);
     }
 }
 @media (min-width: 1000px) {
