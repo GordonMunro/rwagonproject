@@ -18,6 +18,7 @@ a {
   background-repeat: repeat-y;
   background-size: 100%;
   color: white;
+  /* height: 90%; */
 }
 
 ul {
@@ -37,8 +38,9 @@ footer {
   background-color: #ebe2d9;
   }
 iframe {
-  height: 40vh;
+  height: 100%;
   width: 100%;
+  max-width: 500px;
 }
 /* Base Layout Styles */
 .news {
@@ -47,7 +49,12 @@ iframe {
 .col {
   padding: 10px;
 }
-
+.col_loc {
+  max-height: 300px;
+}
+.loc {
+  height: 300px;
+}
 .nav-button {
   background-color: rgba(235,226,217,255);
   border: none;
@@ -67,7 +74,7 @@ iframe {
     font-size: 16px;
     width: 20rem;
     text-align: center;
-    margin: 1px 0;
+    margin: 10px 0;
     font-weight: bold;
     border-radius: 10px;
     }
@@ -114,9 +121,8 @@ iframe {
   padding: 10px 0;
 }
 #location {
-  height: 40rem;
-
-}
+  height: 30rem;
+  }
 #din-menu {
     background-image: url(../images/cassouley_copy2.jpg);
     background-repeat: repeat-y;
@@ -149,8 +155,7 @@ iframe {
 @media (min-width:769px) {
 
   .main-nav,
-  .row,
-  .foot-img {
+  .row, {
     display: flex;
   }
 
@@ -183,13 +188,7 @@ iframe {
     flex-wrap: wrap;
     flex-direction: row;
   }
-  .foot-img {
-    justify-content: center;
-    }
-  }
-   .foot-thumbs {
-    max-width: 900px;
-    }
+
     .sticky_footer {
       min-height: calc(100vh - 118px);
     }
